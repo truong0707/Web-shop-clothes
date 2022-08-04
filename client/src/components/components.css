@@ -1,0 +1,17 @@
+.box-info-footer {
+    margin-top: 50px;
+    color: #000;
+}
+.button-subscribe {
+    background-color: #7FAD39;
+    border: none;
+    height: 45px;
+    color: #fff;
+}
+.box-investors {
+    display: flex;
+}
+.cc {
+    width: 600px;
+    margin-left:'10px'
+}
