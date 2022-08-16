@@ -1,32 +1,24 @@
 // icon
 // import { FaBookmark } from "react-icons/fa";
-import '../reuseComponents/reuseComponents.css';
+import '../components/components.css';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 
-export default function CardProduct(props: any) {
-    const [animation, setAnimation] = useState('')
-    // const [scroll, setScroll] = useState(window.scrollY);
+interface TypeProps {
+    productId: any,
+    imageCard: any,
+    nameCard: any,
+    descriptionCard: any,
+    priceCard: any,
+}
 
-    useEffect(() => {
-        const handleClick = () => {
-            if (window.scrollY > 300) {
-                setAnimation('cc')
-            } else {
-                setAnimation('')
-            }
-        }
-        // console.log(window.scrollY)
-
-        window.addEventListener('scroll', handleClick)
-    }, [])
-
+export default function CardProduct(props: TypeProps) {
+   
 
     return (
-        <Link className={animation} style={{ textDecoration: 'none' }} to={`/detail-product/${props.productId}`}>
+        <Link style={{ textDecoration: 'none' }} to={`/detail-product/${props.productId}`}>
             <div className="card-product-body">
-                <img src={props.imageCard} className="card-img-top" alt="..." />
                 <img src={props.imageCard} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <p className="card-title">{props.nameCard}</p>

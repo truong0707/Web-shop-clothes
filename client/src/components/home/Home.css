@@ -118,9 +118,11 @@
 }
 
 /* box-btn-card-body-home */
-.box-btn-card-body-home {
+/* .box-btn-card-body-home {
     display: flex;
-}
+} */
+
+/* box-btn-load */
 .button-loat-cards-body-home {
     height: 36px;
     background: #fff;
@@ -128,6 +130,7 @@
     display: flex;
     cursor: pointer;
     width: 25%;
+    margin: auto;
 }
 .button-loat-cards-body-home p {
     margin: auto;

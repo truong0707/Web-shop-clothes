@@ -4,12 +4,8 @@ const configViewEngine = require('./configs/viewsEngine'); // sử dụng config
 const ImportData = require('./DataImport'); 
 require('dotenv').config(); // sử dụng dotenv
 
-
 const initWebRoute = require('./route/web');
-const initProductHome = require('./route/ProductHomeRoutes');
-const initApiCardBlog = require('./route/ApiProductsBlog');
 const initUserRoutes = require('./route/UserRoutes');
-const initCardShopping = require('./route/ProductShopping');
 
 const app = express(); // khởi tạo app từ express
 const port = process.env.PORT; // sử dụng PORT ở file .env
@@ -17,15 +13,19 @@ const port = process.env.PORT; // sử dụng PORT ở file .env
 var cors = require('cors') // cho phép sử dụng port
 app.use(cors()) // Use thư viện cors để có thể gọi api từ bên front
 
-
+const initApiTest = require('./route/TestRoutes');
+const initApiCategoryProduct = require('./route/CategoryProduct.Routes');
 /// kết nối mongoDB bằng mongose
+;
 const connectDB = async () => {
     try {
         await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@shop-clothes0.mhzsj.mongodb.net/?retryWrites=true&w=majority`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log("Mongoose connected")
+        console.log("Mongoose connected");
+
+
     } catch (error) {
         console.error(error.message);
         process.exit(1); // mã lỗi
@@ -40,12 +40,10 @@ configViewEngine(app); // set up view engine (chính là express)
 app.use("/api/import", ImportData);
 
 // router
-initWebRoute(app) // gọi hàm initWebRote
-initProductHome(app) // init api productCard
-initApiCardBlog(app)
+initWebRoute(app) // gọi hàm initWebRote 
 initUserRoutes(app)
-initCardShopping(app)
-
+initApiTest(app)
+initApiCategoryProduct(app)
 
 
 

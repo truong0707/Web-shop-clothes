@@ -23,6 +23,68 @@ export default function BodyHome() {
                 <div className='wrapper__content__home'>
                     <BoundaryLine />
                     <div className="list-products-body-home">
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/products/0ffd0703-7fb5-432a-bf09-5a2d0ad9676a_55d53e4f-b06c-4d57-8586-ee8e7a057cc5_360x.jpg?v=1628615050'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/products/d99b402c-e27b-494d-8784-90e534e0e327_360x.jpg?v=1628593108'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/products/bc4b6309-e102-45e2-b260-b84db2f3e762_360x.jpg?v=1628592873'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/files/custom-block-2-compressor_800x_crop_center.jpg?v=1541556026'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/files/custom-block-2-compressor_800x_crop_center.jpg?v=1541556026'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/files/custom-block-2-compressor_800x_crop_center.jpg?v=1541556026'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
+
+                        <CardProduct
+                            key={'d'}
+                            productId={'d'}
+                            imageCard={'https://cdn.shopify.com/s/files/1/0071/4755/2866/files/custom-block-2-compressor_800x_crop_center.jpg?v=1541556026'}
+                            priceCard={'d'}
+                            nameCard={'d'}
+                            descriptionCard={'d'}
+                        />
                         {/* {
                             loading ? ("loading...") : error ? ("errror") : (
                                 <>
@@ -41,7 +103,11 @@ export default function BodyHome() {
                         } */}
                     </div>
                     {/*  Button load card Body home */}
-                    <ButtonLoadMore />
+                    <ButtonLoadMore
+                        classbtnType='button-loat-cards-body-home'
+                        // handleButton={handleShowMoreCard}
+                        contentButton='Load more'
+                    />
                 </div>
 
 
