@@ -1,0 +1,46 @@
+.content__body__blog {
+    margin-top: 40px;
+    width: 92%;
+}
+
+.input-search-blog {
+    padding-left: 18px;
+    font-size: 18px;
+    width: 81%;
+    height: 45px;
+    border-radius: 90px;
+    border: 1px solid #e1e1e1;
+    outline: none; /* bỏ đi outline */
+    /* border: 10px solid; */
+    /* box-sizing: content-box; */ /* cho box context bằng kích cỡ đã cho và cộng thêm padding và border */
+    /* box-sizing: border-box;  */ /* Để mặc định và nó nẽ lấy bớt phần contents để chừa chỗ cho pading và border */
+    /*  box-sizing: padding-box; */ /* nó nẽ bao gồm luôn thằng padding mà ko tính thnagwf boders */
+}
+.list_categories_blog {
+    margin-top: 40px;
+}
+.recent_news_blog {
+    margin-top: 60px;
+}
+.list_categories_blog p {
+    margin-top: 20px;
+}
+
+/*  */
+.btn-read-more {
+    width: 150px;
+    height: 36px;
+    background: #fff;
+    border: 1px #232323 solid;
+    display: flex;
+    cursor: pointer;
+}
+.btn-read-more p {
+    margin: auto;
+    font-size: 12px;
+    font-weight: 800;
+}
+.btn-read-more:hover {
+    background: #232323;
+    color: #fff;
+}

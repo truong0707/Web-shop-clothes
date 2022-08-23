@@ -226,7 +226,7 @@ export default function HideAppBar(props: Props) {
           {renderMobileMenu}
           {renderMenu}
 
-          <AppBar style={{ background: '#000', marginBottom: '0px' }}>
+          <AppBar style={{ background: '#000'}}>
             <Toolbar>
               <IconButton
                 size="large"

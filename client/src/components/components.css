@@ -22,6 +22,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
     width: 14.2rem;
     position: relative;
+    margin: auto;
     background: #fff;
     cursor: pointer;
     font-size: 13px;
@@ -74,4 +75,95 @@ div.card-product-body:hover+div.button-buy-card {
 
 .button-buy-card p {
     margin-top: 4px;
+}
+
+
+
+/* box-btn-card-body-home */
+/* .box-btn-card-body-home {
+    display: flex;
+} */
+
+/* box-btn-load */
+.button-loat-cards-body-home {
+    height: 36px;
+    background: #fff;
+    border: 1px #232323 solid;
+    display: flex;
+    cursor: pointer;
+    width: 25%;
+    margin: auto;
+    margin-top: 27px
+}
+.button-loat-cards-body-home p {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 800;
+}
+.button-loat-cards-body-home:hover {
+    background: #232323;
+    color: #fff;
+}
+/* btn blog */
+.readMore {
+    color: #232323;
+}
+.readMore:hover {
+    color: #fff;
+}
+
+/* btn shop now */
+.button-shop-now-body-home {
+    height: 36px;
+    background: #232323;
+    border: 1px #232323 solid;
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+    width: 36%;
+    margin-bottom: 10px;
+}
+.button-shop-now-body-home p {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 800;
+}
+.button-shop-now-body-home:hover {
+    background: #fff;
+    color: #232323;
+}
+.img__main__bodyHome {
+    height: 450px;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+.img__main__bodyHome img {
+    width: 100%;
+    height: 100%;
+}
+.img__main__bodyHome .box-content-img {
+    position: absolute;
+    top: 50%;
+    left: 69%;
+}
+.box-content-img .btn-go-to-shop {
+    background: #232323;
+    width: 240px;
+    height: 35px;
+    color: #fff;
+    display: inline-flex;
+}
+.btn-go-to-shop {
+    cursor: pointer;
+}
+.btn-go-to-shop p {
+    margin: auto;
+    align-items: center;
+}
+.img__main__bodyHome .decription__img__main {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 56%;
 }

@@ -1,22 +1,26 @@
 import React from 'react'
-
+import '../components/components.css';
 
 interface TypeButtonLoadMore {
   classbtnType: string,
-  contentButton: string
+  contentButton: string,
+  handleButton: () => void;
 }
 
 export default function ButtonLoadMore(props: TypeButtonLoadMore) {
   return (
     <>
-      <div className='box-btn-card-body-home'>
-        <div className={props.classbtnType} /* onClick={props.handleButton} */>
+      <div style={{marginTop:'50px'}} className='box-btn-card-body-home'>
+        <div className={props.classbtnType} onClick={props.handleButton}>
           <p>{props.contentButton}</p >
         </div>
       </div>
     </>
   )
 }
+
+
+
 
 
 // import React from 'react'

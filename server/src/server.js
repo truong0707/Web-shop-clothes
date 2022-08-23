@@ -15,6 +15,7 @@ app.use(cors()) // Use thư viện cors để có thể gọi api từ bên fron
 
 const initApiTest = require('./route/TestRoutes');
 const initApiCategoryProduct = require('./route/CategoryProduct.Routes');
+const initProductApi = require('./route/Product.Route');
 /// kết nối mongoDB bằng mongose
 ;
 const connectDB = async () => {
@@ -40,10 +41,11 @@ configViewEngine(app); // set up view engine (chính là express)
 app.use("/api/import", ImportData);
 
 // router
-initWebRoute(app) // gọi hàm initWebRote 
-initUserRoutes(app)
-initApiTest(app)
-initApiCategoryProduct(app)
+initWebRoute(app); // gọi hàm initWebRote 
+initUserRoutes(app);
+initApiTest(app);
+initApiCategoryProduct(app);
+initProductApi(app);
 
 
 

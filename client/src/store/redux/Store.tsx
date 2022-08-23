@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+import { productDetailReducer, productListHomeReducer, productListReducer } from "./reducers/ProductReducer";
 import { userLoginReduder, userRegisterReducer } from "./reducers/userReducer";
 // import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
@@ -8,9 +9,13 @@ import { userLoginReduder, userRegisterReducer } from "./reducers/userReducer";
 const reducer = combineReducers({
     userLogin: userLoginReduder,
     userRegister: userRegisterReducer,
+    productList: productListReducer,
+    productDetail: productDetailReducer,
+    productListHome: productListHomeReducer,
 })
 
 const middleware = [thunk];
+
 
 // check Local LocalStorage --> initState
 const userInfoFromLocalStorage = localStorage.getItem("userInfo")

@@ -4,7 +4,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className="footerApp" style={{ height: "40%", background: "#f6f8f8", marginTop: "40px" }}>
+            {/* <div className="footerApp" style={{ height: "40%", background: "#f6f8f8", marginTop: "40px" }}>
                 <div className="container box-footer">
                     <div className='row'>
                         <div className='col-xl-4 box-info-footer' >
@@ -66,7 +66,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
         </>
     );
 }
