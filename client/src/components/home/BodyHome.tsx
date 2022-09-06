@@ -6,7 +6,8 @@ import BoundaryLineText from '../BoundaryLineText';
 import ButtonLoadMore from '../ButtonLoadMore';
 import CardProduct from '../CardProduct';
 import main_img_home from '../../assets/images/main_img_home.jpg';
-import BackdropProgressLoading from '../BackdropProgressLoading';
+// import BackdropProgressLoading from '../BackdropProgressLoading';
+import SliderProduct from '../SliderProduct';
 
 export default function BodyHome() {
     /* data store */
@@ -33,7 +34,7 @@ export default function BodyHome() {
 
 
     useEffect(() => {
-        if (products.productType1) {
+        if (products) {
             setProductType1(products.productType1);
             setProductType2(products.productType2);
         }
@@ -62,11 +63,11 @@ export default function BodyHome() {
                 <div className='wrapper__content__home'>
                     <BoundaryLineText />
                     <div className='box__trademark'>
-                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-1-compressor_250x.jpg?v=1541560760' style={{ width: '100%', height: '100%' }} /></div>
-                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-2-compressor_250x.jpg?v=1541560776' style={{ width: '100%', height: '100%' }} /></div>
-                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-3-compressor_250x.jpg?v=1541560797' style={{ width: '100%', height: '100%' }} /></div>
-                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-5-compressor_250x.jpg?v=1541560823' style={{ width: '100%', height: '100%' }} /></div>
-                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-4-compressor_250x.jpg?v=1541560806' style={{ width: '100%', height: '100%' }} /></div>
+                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-1-compressor_250x.jpg?v=1541560760' style={{ width: '100%', height: '100%' }} alt='' /></div>
+                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-2-compressor_250x.jpg?v=1541560776' style={{ width: '100%', height: '100%' }} alt='' /></div>
+                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-3-compressor_250x.jpg?v=1541560797' style={{ width: '100%', height: '100%' }} alt='' /></div>
+                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-5-compressor_250x.jpg?v=1541560823' style={{ width: '100%', height: '100%' }} alt='' /></div>
+                        <div><img src='https://cdn.shopify.com/s/files/1/0071/4755/2866/files/brand-4-compressor_250x.jpg?v=1541560806' style={{ width: '100%', height: '100%' }} alt='' /></div>
                     </div>
                 </div>
 
@@ -74,7 +75,7 @@ export default function BodyHome() {
                     <BoundaryLine />
                     <div /* style={{ background: 'pink' }} */ className="list-products-body-home">
                         {
-                            error ? ("errror") : !products ? ("error") : (
+                            error ? ("error") : !products ? ("error") : !productType1 ? ('error') : (
                                 <>
                                     {productType1.map((product: any) => (
                                         <CardProduct
@@ -157,7 +158,7 @@ export default function BodyHome() {
                     {/* ProductType 2 */}
                     <div className="list-products-body-home">
                         {
-                            error ? ("errror") : !products ? ("error") : (
+                            error ? ("errror") : !products ? ("error") : !productType2 ? ("error") : (
                                 <>
                                     {productType2.map((product: any) => (
                                         <CardProduct
@@ -206,8 +207,8 @@ export default function BodyHome() {
                 <div style={{ width: '91%', margin: 'auto' }}>
                     <div className='content__body__home'>
                         <div className='wrap__slider__product'>
-                            {/* <SliderProduct />
-                            <Button
+                            <SliderProduct />
+                            {/* <Button
                                 classbtnType='button-loat-cards-body-home'
                                 contentButton='VIEW GALLERY'
                             /> */}

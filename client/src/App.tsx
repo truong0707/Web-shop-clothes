@@ -28,7 +28,7 @@ function App() {
 
 
   useEffect(() => {
-    if (getuser == null && getuser == undefined) {
+    if (getuser === null && getuser === undefined) {
       setUser(false)
     } else {
       setUser(true)
@@ -39,7 +39,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar children={undefined} />
+        {/* <NavBar children={undefined} /> */}
+
+        <ul>
+          <li>home</li>
+          <li>home</li>
+        </ul>
 
         <Routes>
           <Route path='/' element={<Home />} />

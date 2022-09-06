@@ -120,7 +120,7 @@ export default function Register() {
       errorSubmit.comfirmPass = "Vui lòng nhập lại mật khẩu !";
       setErrors(errorSubmit);
       checkError = false;
-    } else if (inputs.comfirmPass != inputs.password) {
+    } else if (inputs.comfirmPass !== inputs.password) {
       alert("Nhập lại mật khẩu không khớp nhau!");
       checkError = false;
     } else if (inputs.comfirmPass === inputs.password) {
@@ -219,7 +219,7 @@ export default function Register() {
               <MenuItem value={'Mỹ'}>Mỹ</MenuItem>
             </Select>
           </FormControl>
-          {errors.nationality == '' || errors.nationality === undefined ? <p style={{ margin: '30px', height: '0px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '10px', fontSize: '14px' }}>{errors.nationality}</p>}
+          {errors.nationality === '' || errors.nationality === undefined ? <p style={{ margin: '30px', height: '0px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '10px', fontSize: '14px' }}>{errors.nationality}</p>}
 
 
           <TextField
@@ -230,7 +230,7 @@ export default function Register() {
             name='email'
             fullWidth
           />
-          {errors.email == '' || errors.email === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.email}</p>}
+          {errors.email === '' || errors.email === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.email}</p>}
 
           <TextField
             onChange={handleInputChange}
@@ -240,7 +240,7 @@ export default function Register() {
             name='password'
             fullWidth
           />
-          {errors.password == '' || errors.password === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.password}</p>}
+          {errors.password === '' || errors.password === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.password}</p>}
 
           <TextField
             onChange={handleInputChange}
@@ -250,7 +250,7 @@ export default function Register() {
             name='comfirmPass'
             fullWidth
           />
-          {errors.comfirmPass == '' || errors.comfirmPass === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.comfirmPass}</p>}
+          {errors.comfirmPass === '' || errors.comfirmPass === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.comfirmPass}</p>}
 
           <Button style={{ background: '#000' }} type="submit" variant="contained">Đăng Ký</Button>
         </form>

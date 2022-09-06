@@ -46,6 +46,33 @@ const getAllProduct = async (req, res) => {
     }
 }
 
+/* delete ProductById */
+const deleteProductById = async (req, res) => {
+    const id = req.query.id;
+    try {
+
+        if (!id) {
+            return res.status(500).json({
+                errCode: 1,
+                errMessage: 'missing require parameter',
+                data: {}
+            })
+        }
+
+        const productDeleted = await Product.deleteOne({
+            '_id': { $in: id }
+        });
+        res.status(200).json({ success: "delete product success!" });
+
+    } catch (e) {
+        console.log('create error:', e)
+        return res.status(200).json({
+            errCode: -1,
+            errMessage: 'Error from server'
+        })
+    }
+}
+
 
 /* get product detail */
 const getProductById = async (req, res) => {
@@ -81,17 +108,39 @@ const getProductHome = async (req, res) => {
     const type = req.query.type;
     const limit = req.query.limit;
 
+    // const products = await Product.find({
+    //     'categoty': [category, 'mens-shirt', "women's-shirt"],
+    //     'type': type
+    // }).limit(limit);
+
+    // const cc = "women's-suit";
+
     const products = await Product.find({
-        'categoty': [category],
+        'categoty': category,
+        // 'categoty': cc,
         'type': type
     }).limit(limit);
 
     return res.status(200).json({ success: "get ok!", products });
 }
 
+const getProductShop = async (req, res) => {
+    const type = req.query.type;
+    const limit = req.query.limit;
+
+    const products = await Product.find({
+        'type' :  type,
+    })
+
+    res.send(products);
+    
+}
+
 module.exports = {
     postProduct,
     getAllProduct,
+    deleteProductById,
     getProductById,
-    getProductHome
+    getProductHome,
+    getProductShop
 }

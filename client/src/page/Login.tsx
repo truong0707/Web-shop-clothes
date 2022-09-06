@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { login } from '../store/redux/actions/userActions';
 // import { useAppDispatch } from '../store/redux/Store';
 import { StateStore } from '../App';
-import LoadingButton from '@mui/lab/LoadingButton';
+// import LoadingButton from '@mui/lab/LoadingButton';
 import ErrorMessage from '../components/ErrorMessage';
 import BackdropProgressLoading from '../components/BackdropProgressLoading';
 
@@ -72,7 +72,7 @@ export default function Login() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         let errorSubmit: ErrorSubmit = {};
-        let flag = true;
+        // let flag = true;
         let check = false;
 
         // validate email
@@ -125,7 +125,7 @@ export default function Login() {
                         label="Email"
                         fullWidth
                     />
-                    {errors.email == '' || errors.email === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.email}</p>}
+                    {errors.email === '' || errors.email === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.email}</p>}
 
                     <TextField
                         onChange={handleInputChange}
@@ -135,7 +135,7 @@ export default function Login() {
                         name='password'
                         fullWidth
                     />
-                    {errors.password == '' || errors.password === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.password}</p>}
+                    {errors.password === '' || errors.password === undefined ? <p style={{ margin: '0', height: '30px' }}></p> : <p style={{ color: "#D93025", textAlign: 'start', margin: '7px', fontSize: '14px' }}>{errors.password}</p>}
 
                     <Button style={{ background: '#000' }} type="submit" variant="contained">Đăng Nhập</Button>
                     <p>

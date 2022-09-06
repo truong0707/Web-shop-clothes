@@ -167,3 +167,31 @@ div.card-product-body:hover+div.button-buy-card {
     top: 35%;
     left: 56%;
 }
+
+
+/* Slider Product */
+.next_arrow {
+    background: #000;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 45%;
+}
+.prev_arrow {
+    background: #000;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    color: #fff;
+}
+.slider_Product {
+    width: 100%;
+    margin-top: 50px;
+}
